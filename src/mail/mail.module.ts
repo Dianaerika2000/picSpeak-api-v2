@@ -23,7 +23,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
           from: `"No Reply" <${configService.get('MAIL_FROM')}>`,
         },
         template: {
-          dir: join(__dirname, '..', '..', 'mail', 'templates'),
+          dir: join(__dirname, '..', 'mail', 'templates'),
           adapter: new HandlebarsAdapter(),
           options: {
             strict: true,
