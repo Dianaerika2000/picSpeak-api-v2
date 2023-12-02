@@ -8,6 +8,7 @@ import { ChatModule } from './chat/chat.module';
 import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { AwsModule } from './aws/aws.module';
+import { ChatGptApiModule } from './chat-gpt-api/chat-gpt-api.module';
 
 @Module({
   imports: [
@@ -39,6 +40,7 @@ import { AwsModule } from './aws/aws.module';
     UsersModule,
     AuthModule,
     AwsModule,
+    ChatGptApiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
