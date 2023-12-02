@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, DeleteDateColumn, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 import { User } from "./user.entity";
 import { Nacionality } from "src/nacionality/entities/nacionality.entity";
-// import { InappropriateContentUser } from "src/configuration/entities/inappropriate_content_user.entity";
+import { InappropriateContentUser } from "src/configuration/entities/inappropriate_content_user.entity";
 // import { InterestUser } from "src/configuration/entities/interest_user.entity";
 // import { LanguageUser } from "src/configuration/entities/language_user.entity";
 

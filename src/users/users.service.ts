@@ -9,8 +9,6 @@ import { UpdateProfileDto } from 'src/auth/dto/update-profile.dto';
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectRepository(User)
-    private readonly userRepository: Repository<User>,
     @InjectRepository(IndividualUser)
     private readonly individualRepository: Repository<IndividualUser>,
   ) { }
@@ -38,11 +36,11 @@ export class UsersService {
   }
 
   findAll() {
-    return this.userRepository.find();
+    return this.individualRepository.find();
   }
 
   findOne(id: number) {
-    return this.userRepository.findOne({ where: { id } });
+    return this.individualRepository.findOne({ where: { id } });
   }
 
   async update(id: number, updateUserDto: UpdateProfileDto) {
@@ -79,16 +77,16 @@ export class UsersService {
       user.photo_url = updateUserDto.photo_url;
     }
 
-    return await this.userRepository.save(user);
+    return await this.individualRepository.save(user);
   }
 
   async remove(id: number) {
-    const userToRemove = await this.userRepository.findOne({ where: {id} });
+    const userToRemove = await this.individualRepository.findOne({ where: {id} });
 
     if (!userToRemove) {
       throw new NotFoundException(`User with ID ${id} not found`);   
     }
-    return this.userRepository.remove(userToRemove);
+    return this.individualRepository.remove(userToRemove);
   }
 
   findOneByEmail(email: string) {

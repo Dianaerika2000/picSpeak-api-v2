@@ -10,6 +10,8 @@ import { AuthModule } from './auth/auth.module';
 import { AwsModule } from './aws/aws.module';
 import { ChatGptApiModule } from './chat-gpt-api/chat-gpt-api.module';
 import { NacionalityModule } from './nacionality/nacionality.module';
+import { InappropriateContentModule } from './inappropriate-content/inappropriate-content.module';
+import { ConfigurationModule } from './configuration/configuration.module';
 
 @Module({
   imports: [
@@ -43,6 +45,8 @@ import { NacionalityModule } from './nacionality/nacionality.module';
     AwsModule,
     ChatGptApiModule,
     NacionalityModule,
+    InappropriateContentModule,
+    ConfigurationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
