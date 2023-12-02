@@ -5,6 +5,9 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { MailModule } from './mail/mail.module';
 import { ChatModule } from './chat/chat.module';
+import { UsersModule } from './users/users.module';
+import { AuthModule } from './auth/auth.module';
+import { AwsModule } from './aws/aws.module';
 
 @Module({
   imports: [
@@ -33,6 +36,9 @@ import { ChatModule } from './chat/chat.module';
     }),
     MailModule,
     ChatModule,
+    UsersModule,
+    AuthModule,
+    AwsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
